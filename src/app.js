@@ -11,10 +11,10 @@ quizButton.onclick = function() {
         'A subspecies of the Atlas Moth may have been the inspiration for Mothra (Y/N)'
     );
     const questionTwo = prompt(
-        'A subspecies of the Atlas Moth may have been the inspiration for Mothra (Y/N)'
+        'Atlas moths have a life cycle of 4 stages (Y/N)'
     );
     const questionThree = prompt(
-        'A subspecies of the Atlas Moth may have been the inspiration for Mothra (Y/N)'
+        'Atlas Moths are big and scary! (Y/N)'
     );
 
     let answer = 0;
@@ -32,7 +32,7 @@ quizButton.onclick = function() {
     let totalScore = 3;
     let percent = parseInt((answer / totalScore) * 100);
     let result =
-        'Good job ' +
+        'Nice try ' +
         player +
         '! Your score is ' +
         answer +
@@ -40,7 +40,13 @@ quizButton.onclick = function() {
         totalScore +
         ". That's " +
         percent +
-        '% ! You know a lot about Atlas Moths!';
+        '% ! ';
+    if(answer >= 2) {
+        result += 'You know a lot about Atlas Moths!';
+    } else {
+        result += 'Perhaps you need to read more about Atlas Moths.';
+    }
+
 
     quizResult.textContent = result;
 };

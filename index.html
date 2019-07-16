@@ -1,101 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>All About Atlas Moths</title>
-        <link rel="stylesheet" href="src/main.css" />
-    </head>
-    <body>
-        <header>
-            <h1>All About Atlas Moths</h1>
-        </header>
 
-        <section>
-            <h2>Attacus Atlas</h2>
-            <p>
-                Attacus atlas, the Atlas moth, is a large saturniid moth endemic
-                to the forests of Asia. The species was first described by Carl
-                Linnaeus in his 1758 10th edition of Systema Naturae.
-            </p>
-        </section>
-        <section>
-            <h2>Life Cycle of the Atlas Moth</h2>
-            <ul>
-                <li>
-                    <span id="lifeCycle">Mating</span> Females release powerful
-                    pheromones through a gland on the end of the abdomen to
-                    attract a mate. The female does not stray far from the
-                    location of her discarded cocoon. She seeks out a perch
-                    where the air currents will best carry her pheromones. Males
-                    can detect and home in on these pheromones from several
-                    kilometers away using chemoreceptors located on their
-                    feathery antennae. Once fertilized, the female lays a number
-                    of spherical eggs, 2.5 mm (0.098 in) in diameter, on the
-                    undersides of the leaves of food plants.
-                </li>
-                <li>
-                    <span id="lifeCycle">Larva</span> Dusty-green caterpillars
-                    hatch after approximately two weeks and feed voraciously on
-                    the foliage of citrus, cinnamon, guava, and evergreen trees.
-                    The caterpillars can grow to 11.5 cm (4.5 in) in length and
-                    2.5 cm (0.98 in) in thickness. They are adorned with white,
-                    waxy, fleshy spines along their backs, which become more
-                    prominent at later instars. Beside the prolegs on the last
-                    abdominal segment, there is a large green spot surrounded by
-                    an orange ring.
-                </li>
-                <li>
-                    <span id="lifeCycle">Pupa</span> After reaching a length of
-                    about 11.5 cm (4.5 in), the caterpillars are ready to
-                    pupate. They spin a 7-8 cm long papery cocoon interwoven
-                    with desiccated leaves and attach it to a twig using a
-                    strand of silk. The adult moths emerge from the cocoon after
-                    approximately four weeks depending on environmental factors.
-                </li>
-                <li>
-                    <span id="lifeCycle">Imago</span> Male Atlas moth Adult
-                    Atlas moths are weak, unsteady fliers. To conserve energy,
-                    the moths rest during the day and fly at night. As they lack
-                    fully formed mouthparts, the adults cannot eat, subsisting
-                    entirely on fat reserves accumulated during the larval
-                    stage. As a result, they live for only a few days during
-                    which their sole objective is seeking out a mate. Adults may
-                    be found on wing throughout the year but are most abundant
-                    between November and January.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <img
-                src="assets/Ataccus_atlas.jpg"
-                class="blurbImage"
-                alt="big scary moth"
-            />
-            <h2 class="blurbTitle">Etymology</h2>
-            <p class="blurbContent">
-                Atlas moths are named after either Atlas, the Titan of Greek
-                mythology (due to their size), or their map-like wing patterns.
-                In Hong Kong, the Cantonese means "snake's head moth", referring
-                to the prominent extension of the forewing which bears
-                resemblance to the head of a snake.
-            </p>
-        </section>
-        <section>
-            <h2 class="blurbTitle">Trivia</h2>
-            <p class="blurbContent">
-                The Japanese subspecies A. a. ryukyuensis, native to Yonaguni in
-                the Yaeyama Islands, may have served as inspiration for the
-                movie monster Mothra.
-            </p>
-        </section>
-        <section class="quiz">
-            <h1>Test your knowledge!</h1>
-            <button id="quiz-button">Take Quiz</button>
-            <p id="quiz-result"></p>
-        </section>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>All About Atlas Moths</title>
+    <link rel="stylesheet" href="src/main.css" />
+</head>
 
-        <script src="src/app.js" type="module"></script>
-    </body>
+<body>
+    <header>
+        <h1>All About Atlas Moths</h1>
+    </header>
+
+    <section>
+        <h2>Attacus Atlas</h2>
+        <p>
+            Attacus atlas, the Atlas moth, is a large saturniid moth endemic
+            to the forests of Asia. The species was first described by Carl
+            Linnaeus in his 1758 10th edition of Systema Naturae.
+        </p>
+    </section>
+
+    <section>
+        <h2>Life Cycle of the Atlas Moth</h2>
+        <ol id="lifecycle-list">
+            <li>
+                <span id="lifeCycle">Mating</span> Females release powerful
+                pheromones through a gland on the end of the abdomen to
+                attract a mate. The female does not stray far from the
+                location of her discarded cocoon. She seeks out a perch
+                where the air currents will best carry her pheromones. Males
+                can detect and home in on these pheromones from several
+                kilometers away using chemoreceptors located on their
+                feathery antennae. Once fertilized, the female lays a number
+                of spherical eggs, 2.5 mm (0.098 in) in diameter, on the
+                undersides of the leaves of food plants.
+            </li>
+            <li>
+                <span id="lifeCycle">Larva</span> Dusty-green caterpillars
+                hatch after approximately two weeks and feed voraciously on
+                the foliage of citrus, cinnamon, guava, and evergreen trees.
+                The caterpillars can grow to 11.5 cm (4.5 in) in length and
+                2.5 cm (0.98 in) in thickness. They are adorned with white,
+                waxy, fleshy spines along their backs, which become more
+                prominent at later instars. Beside the prolegs on the last
+                abdominal segment, there is a large green spot surrounded by
+                an orange ring.
+            </li>
+            <li>
+                <span id="lifeCycle">Pupa</span> After reaching a length of
+                about 11.5 cm (4.5 in), the caterpillars are ready to
+                pupate. They spin a 7-8 cm long papery cocoon interwoven
+                with desiccated leaves and attach it to a twig using a
+                strand of silk. The adult moths emerge from the cocoon after
+                approximately four weeks depending on environmental factors.
+            </li>
+            <li>
+                <span id="lifeCycle">Imago</span> Male Atlas moth Adult
+                Atlas moths are weak, unsteady fliers. To conserve energy,
+                the moths rest during the day and fly at night. As they lack
+                fully formed mouthparts, the adults cannot eat, subsisting
+                entirely on fat reserves accumulated during the larval
+                stage. As a result, they live for only a few days during
+                which their sole objective is seeking out a mate. Adults may
+                be found on wing throughout the year but are most abundant
+                between November and January.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <figure>
+            <img src="assets/Ataccus_atlas.jpg" class="mothImage" alt="big scary moth" />
+            <figcaption>Big Freaking Moth!</figcaption>
+        </figure>
+        <h2 class="blurbTitle">Habitat</h2>
+        <p class="blurbContent">Their habitat is primarily dry tropical forests, secondary forests, and shrublands
+            across:</p>
+        <ul>
+            <li>South Asia</li>
+            <li>East Asia</li>
+            <li>Southeast Asia, including Borneo</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="blurbTitle">Etymology</h2>
+        <p class="blurbContent">
+            Atlas moths are named after either Atlas, the Titan of Greek
+            mythology (due to their size), or their map-like wing patterns.
+            In Hong Kong, the Cantonese means "snake's head moth", referring
+            to the prominent extension of the forewing which bears
+            resemblance to the head of a snake.
+        </p>
+    </section>
+    <section>
+        <h2 class="blurbTitle">Trivia</h2>
+        <p class="blurbContent">
+            The Japanese subspecies A. a. ryukyuensis, native to Yonaguni in
+            the Yaeyama Islands, may have served as inspiration for the
+            movie monster Mothra.
+        </p>
+    </section>
+    <section class="quiz">
+        <h1>Test your knowledge!</h1>
+        <button id="quiz-button">Take Quiz</button>
+        <p id="quiz-result"></p>
+    </section>
+
+    <script src="src/app.js" type="module"></script>
+</body>
+
 </html>
