@@ -28,3 +28,5 @@ test('y is yes', function(assert) {
     //Assert
     assert.equal(result, expected);
 });
+
+// write 'no' response test
