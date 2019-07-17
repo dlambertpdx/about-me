@@ -1,25 +1,23 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
+
 // What do I need to import from other js files?
-import compareNumbers from './make-guess.js';
+// import compareNumbers from './make-guess.js';
+import userAttempts from './user-attempts.js';
 
 // What state do I need to track?
-let randomNumber = Math.floor(Math.random() * 20) + 1;
-let guessCount = 1;
-
-console.log('random number: ' + randomNumber);
+let randomNumber = Math.floor(Math.random() * 20) + 1; // generate random number
+let attempts = 0;
 
 // What do I need from the DOM (elements)
-const guessInput = document.getElementById('userGuess');
-const guessSubmit = document.getElementById('submitGuess');
-const guessResult = document.getElementById('guessResult');
-const correctGuess = document.getElementById('correctResult');
-const tooLowOrHigh = document.getElementById('tooLowTooHigh');
+const guessInput = document.getElementById('userGuess'); // user input
+const guessSubmit = document.getElementById('submitGuess'); // user button
+const correctGuess = document.getElementById('correctResult'); // display correct
+const tooLowOrHigh = document.getElementById('tooLowTooHigh'); // display wrong
+const userTries = document.getElementById('numOfTries'); // number of user attemps
+const gameOver = document.getElementById('over'); // game over image
 
 // What events do I need to listen to?
 guessSubmit.addEventListener('click', () => {
     let userGuess = Number(guessInput.value);
-    console.log(userGuess);
     if(userGuess > randomNumber) {
         tooLowOrHigh.textContent = 'Sorry, your guess is too high!';
     }
@@ -30,4 +28,11 @@ guessSubmit.addEventListener('click', () => {
         correctGuess.textContent = 'You got it!';
     }
 
+    // limit user attempts
+    attempts += 1;
+    userTries.textContent = 'Number of tries: ' + userAttempts(attempts) + ' of 4.';
+    if(attempts === 4) {
+        gameOver.classList.remove('hidden');
+        guessSubmit.disabled = true;
+    }
 });

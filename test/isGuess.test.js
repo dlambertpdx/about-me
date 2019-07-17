@@ -1,4 +1,6 @@
 import compareNumbers from '../src/make-guess.js';
+import userAttempts from '../src/user-attempts.js';
+
 const test = QUnit.test;
 
 test('guess equals correct number', (assert) => {
@@ -43,5 +45,17 @@ test('guess less than correct number', (assert) => {
     const result = compareNumbers(guess, correctNumber);
 
     //Assert
+    assert.equal(result, expected);
+});
+
+test('user attempts', (assert) => {
+    // Arrange
+    const attempts = 3;
+    const expected = 3;
+
+    // Act
+    const result = userAttempts(attempts);
+
+    // Assert
     assert.equal(result, expected);
 });
