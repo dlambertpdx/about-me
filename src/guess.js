@@ -1,6 +1,4 @@
-
 // What do I need to import from other js files?
-// import compareNumbers from './make-guess.js';
 import userAttempts from './user-attempts.js';
 
 // What state do I need to track?
