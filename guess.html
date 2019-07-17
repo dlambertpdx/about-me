@@ -10,11 +10,22 @@
 </head>
 
 <body>
-    <label id="numberLabel">Guess a Number between 1 & 20:</label>
+    <header>
+        <h1>Guess the Number</h1>
+        <p>You'll have 4 chances to guess the correct number between 1 through 20!</p>
+    </header>
+    <label id="numberLabel">Your Guess:</label>
     <input id="userGuess" type="number">
     <button id="submitGuess">Guess!</button>
 
-<script src="src/guess.js"></script>
+    <section>
+        <h2>Result</h2>
+        <p id='guessResult'></p>
+        <p id="tooLowTooHigh"></p>
+        <p id="correctResult"></p>
+    </section>
+
+<script src="src/guess.js"  type="module"></script>
 </body>
 
 </html>
