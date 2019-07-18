@@ -20,17 +20,23 @@ let losses = 0;
 playGame.addEventListener('click', () => {
     const computerMove = getPlay(); // random number function
     const userMove = document.querySelector('input:checked');
-    userMove.textContent = 'You chose ' + userMove;
+
+    console.log('user chose: ' + userMove.value);
+
+    console.log('computer chose:' + computerMove);
+
+
 
     // game logic
     if(computerMove === userMove) {
         return message.textContent = 'It\'s a tie!';
     }
     if(userMove === chooseRock) {
-        if(computerMove === computerPaper) {
+        if(computerMove === computerMove.paper) {
             message.textContent = 'You lost!';
             losses++;
             lossCount.textContent = losses;
+            computerPaper.classList.remove('invisible');
         } else {
             message.textContent = 'You won!';
             wins++;
@@ -38,10 +44,11 @@ playGame.addEventListener('click', () => {
         }
     }
     if(userMove === choosePaper) {
-        if(computerMove === computerScissors) {
+        if(computerMove === computerMove.scissors) {
             message.textContent = 'You lost!';
             losses++;
             lossCount.textContent = losses;
+            computerScissors.classList.remove('invisible');
         } else {
             message.textContent = 'You won!';
             wins++;
@@ -49,10 +56,11 @@ playGame.addEventListener('click', () => {
         }
     }
     if(userMove === chooseScissors) {
-        if(computerMove === computerRock) {
+        if(computerMove === computerMove.rock) {
             message.textContent = 'You lost!';
             losses++;
             lossCount.textContent = losses;
+            computerRock.classList.remove('invisible');
         } else {
             message.textContent = 'You won!';
             wins++;
