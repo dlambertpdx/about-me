@@ -1,5 +1,11 @@
 body {
     background-color: darkolivegreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+    max-width: 400px;
+    margin: auto;
 }
 
 nav {
@@ -37,5 +43,7 @@ input:checked + .radio-image{
 
 .score {
     display: flex;
+    justify-content: space-evenly;
+    width: 50%;
     margin: auto;
 }
