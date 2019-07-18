@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ROCK - PAPER - SCISSORS</title>
+    <link rel="stylesheet" href="src/game.css">
+</head>
+
+<body>
+    <header>
+        <h1>Let's Play Rock - Paper - Scissors!</h1>
+        <nav><a href="./">Home</a></nav>
+        <nav><a href="./guess.html">Guess A Number</a></nav>
+        <nav><a href="./game.html">Rock Paper Scissors</a></nav>
+    </header>
+    <main>
+        <h3>How To Play:</h3>
+        <ul>
+            <li>Rock beats Scissors.</li>
+            <li>Paper beats Rock.</li>
+            <li>Scissors beats Paper.</li>
+        </ul>
+        <p>
+            <label>
+                <input type="radio" name="game-choice" value="rock" checked>
+                <img class="radio-image" src="assets/RPS/rock.jpg" alt="rock image">
+            </label>
+            <label>
+                <input type="radio" name="game-choice" value="paper">
+                <img class="radio-image" src="assets/RPS/paper.jpg" alt="paper image">
+            </label>
+            <label>
+                <input type="radio" name="game-choice" value="scissors">
+                <img class="radio-image" src="assets/RPS/scissors.jpg" alt="scissors image">
+            </label>
+            <p>
+                <button id="start game">Play!</button>
+            </p>
+        </p>
+        <p>Choose Rock, Paper, or Scissors to get started!</p>
+
+        <p>Computer's Choice</p>
+        <img id="computer-choice" class="invisible" src="assets/RPS/paper.jpg">
+
+        <p>Your Score:</p>
+
+    </main>
+
+    <script type="module" src="src/game.js"></script>
+</body>
+
+</html>
