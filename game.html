@@ -26,27 +26,30 @@
         <p>
             <label>
                 <input type="radio" name="game-choice" value="rock" checked>
-                <img class="radio-image" src="assets/RPS/rock.jpg" alt="rock image">
+                <img class="radio-image" id="choose-rock" src="assets/RPS/rock.jpg" alt="rock image">
             </label>
             <label>
                 <input type="radio" name="game-choice" value="paper">
-                <img class="radio-image" src="assets/RPS/paper.jpg" alt="paper image">
+                <img class="radio-image" id="choose-paper" src="assets/RPS/paper.jpg" alt="paper image">
             </label>
             <label>
                 <input type="radio" name="game-choice" value="scissors">
-                <img class="radio-image" src="assets/RPS/scissors.jpg" alt="scissors image">
+                <img class="radio-image" id="choose-scissors" src="assets/RPS/scissors.jpg" alt="scissors image">
             </label>
             <p>
-                <button id="start game">Play!</button>
+                <button id="play-game">Play!</button>
             </p>
         </p>
         <p>Choose Rock, Paper, or Scissors to get started!</p>
 
         <p>Computer's Choice</p>
-        <img id="computer-choice" class="invisible" src="assets/RPS/paper.jpg">
+        <img id="computer-rock" class="invisible" src="assets/RPS/rock.jpg">
+        <img id="computer-paper" class="invisible" src="assets/RPS/paper.jpg">
+        <img id="computer-scissors" class="invisible" src="assets/RPS/scissors.jpg">
 
-        <p class="score">Wins: </p>
-        <p class="score">Losses: </p>
+        <p class="score" id="win-count">Wins: </p>
+        <p class="score" id="loss-count">Losses: </p>
+        <p id="message"></p>
 
     </main>
 

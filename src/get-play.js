@@ -13,7 +13,7 @@ export function getPlayFromNumber(randomNumber) {
     // TDD a function that takes a number which is 0, 1, or 2 and returns rock, paper, or scissors accordingly.
     if(randomNumber === 0) {
         return 'rock';
-    } else if (randomNumber === 1) {
+    } else if(randomNumber === 1) {
         return 'paper';
     } else {
         return 'scissors';
