@@ -29,4 +29,30 @@ test('y is yes', function(assert) {
     assert.equal(result, expected);
 });
 
-// write 'no' response test
+test('n is no', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const answer = 'n';
+    const expected = false;
+
+    //Act
+    // Call the function you're testing and set the result to a const
+    const result = isYes(answer);
+
+    //Assert
+    assert.equal(result, expected);
+});
+
+test('no is no', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const answer = 'no';
+    const expected = false;
+
+    //Act
+    // Call the function you're testing and set the result to a const
+    const result = isYes(answer);
+
+    //Assert
+    assert.equal(result, expected);
+});
