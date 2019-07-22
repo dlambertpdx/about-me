@@ -17,6 +17,25 @@ div {
     box-shadow: 10px 10px 20px -1px rgba(0,0,0,0.75);
 }
 
+a:link {
+    text-decoration: none;
+    color: rgb(255, 140, 0);
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: rgb(255, 140, 0);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color:rgb(124, 70, 3);
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
 input {
     border: 1px solid rgb(106, 106, 106);
     border-radius: 6px;
