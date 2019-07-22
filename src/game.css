@@ -1,0 +1,61 @@
+body {
+    background-color: darkolivegreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+main {
+    max-width: 400px;
+    margin: auto;
+}
+
+nav {
+    display: inline;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.radio-image {
+    max-width: 100px;
+    border-radius: 8%;
+}
+
+input:checked + .radio-image{
+    max-width: 125px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#computer-choice {
+    max-width: 200px;
+    border-radius: 8%;
+}
+
+.invisible {
+    display: none;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+}
+
+button {
+    background-color: rgb(114, 0, 63);
+    font-size: 2em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
