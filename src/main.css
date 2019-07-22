@@ -88,3 +88,10 @@ button:hover {
 button:focus, button:active {
     outline: none;
 }
+
+footer {
+    display: block;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
