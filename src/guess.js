@@ -1,38 +1,35 @@
 // What do I need to import from other js files?
-import userAttempts from './user-attempts.js';
+import compareNumbers from './make-guess.js';
 
 // What state do I need to track?
-let randomNumber = Math.floor(Math.random() * 20) + 1; // generate random number
-let attempts = 0;
+let correctNumber = Math.floor(Math.random() * 20) + 1; // generate random number
+console.log(correctNumber);
+let attempts = 4;
 // What do I need from the DOM (elements)
 const guessInput = document.getElementById('userGuess'); // user input
 const guessSubmit = document.getElementById('submitGuess'); // user button
-const correctGuess = document.getElementById('correctResult'); // display correct
-const tooLowOrHigh = document.getElementById('tooLowTooHigh'); // display wrong
-const userTries = document.getElementById('numOfTries'); // number of user attemps
+const tooLowOrHigh = document.getElementById('tooLowTooHigh'); // display too low, too high, win or lose
 const gameOver = document.getElementById('over'); // game over image
 const gameWon = document.getElementById('winner'); // win image
 
 // What events do I need to listen to?
 guessSubmit.addEventListener('click', () => {
     let userGuess = Number(guessInput.value);
-    if(userGuess > randomNumber) {
-        tooLowOrHigh.textContent = 'Sorry, your guess is too high!';
-    }
-    else if(userGuess < randomNumber) {
-        tooLowOrHigh.textContent = 'Sorry, your guess is too low!';
-    }
-    else {
-        correctGuess.textContent = 'You got it!';
+    const result = compareNumbers(userGuess, correctNumber);
+
+    if(result === 0) {
         gameWon.classList.remove('hidden');
-        guessSubmit.disabled = true;
+        tooLowOrHigh.textContent = 'You win!';
+    } else if(result === 1) {
+        tooLowOrHigh.textContent = 'Your guess is too high!';
+    } else {
+        tooLowOrHigh.textContent = 'Your guess is too low!';
     }
 
-    // limit user attempts
-    attempts += 1;
-    userTries.textContent = 'Number of tries: ' + userAttempts(attempts) + ' of 4.';
-    if(attempts === 4) {
+    attempts -= 1;
+    if(attempts === 0) {
         gameOver.classList.remove('hidden');
-        guessSubmit.disabled = true;
+        tooLowOrHigh.textContent = 'You\'re out of guesses!';
     }
+
 });
