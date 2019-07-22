@@ -10,26 +10,28 @@
 </head>
 
 <body>
-    <header>
-        <h1>Guess the Number</h1>
-        <p>You'll have 4 chances to guess the correct number between 1 through 20!</p>
-    </header>
-    <label id="numberLabel">Your Guess:</label>
-    <input id="userGuess" type="number">
-    <button id="submitGuess">Guess!</button>
+    <div>
+        <header>
+            <h1>Guess the Number</h1>
+            <p>You'll have 4 chances to guess the correct number between 1 through 20!</p>
+        </header>
+        <label id="numberLabel">Your Guess:</label>
+        <input id="userGuess" type="text">
+        <button id="submitGuess">Guess!</button>
 
-    <section>
-        <h2>Result</h2>
-        <p id="final-result">
-            <img src="assets/game-over.jpg" class="game-over hidden" id="over" alt="you lose">
-            <img src="assets/you-won.gif" class="you-win hidden" id="winner" alt="slow clap">
-        </p>
-        <p id="tooLowTooHigh"></p>
-        <p id="correctResult"></p>
-        <p id="numOfTries"></p>
+        <section>
+            <h2>Result</h2>
+            <p id="final-result">
+                <img src="assets/game-over.jpg" class="game-over hidden" id="over" alt="you lose">
+                <img src="assets/you-won.gif" class="you-win hidden" id="winner" alt="slow clap">
+            </p>
+            <p id="tooLowTooHigh"></p>
+            <p id="correctResult"></p>
+            <p id="numOfTries"></p>
 
-    </section>
+        </section>
 
+    </div>
     <script src="src/guess.js" type="module"></script>
 </body>
 

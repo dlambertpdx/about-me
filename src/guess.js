@@ -3,7 +3,6 @@ import compareNumbers from './make-guess.js';
 
 // What state do I need to track?
 let correctNumber = Math.floor(Math.random() * 20) + 1; // generate random number
-console.log(correctNumber);
 let attempts = 4;
 // What do I need from the DOM (elements)
 const guessInput = document.getElementById('userGuess'); // user input
@@ -20,6 +19,8 @@ guessSubmit.addEventListener('click', () => {
     if(result === 0) {
         gameWon.classList.remove('hidden');
         tooLowOrHigh.textContent = 'You win!';
+        guessInput.disabled = true;
+        guessSubmit.disabled = true;
     } else if(result === 1) {
         tooLowOrHigh.textContent = 'Your guess is too high!';
     } else {
@@ -30,6 +31,8 @@ guessSubmit.addEventListener('click', () => {
     if(attempts === 0) {
         gameOver.classList.remove('hidden');
         tooLowOrHigh.textContent = 'You\'re out of guesses!';
+        guessInput.disabled = true;
+        guessSubmit.disabled = true;
     }
 
 });
